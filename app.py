@@ -7,7 +7,7 @@ app = Flask(__name__)
 @app.route("/")
 def index():
     query = request.args.get("query","latest")
-    url = f"https://newsapi.org/v2/everything?q={query}&apiKey={NEWS_API_KEY}"
+    url = f"https://newsapi.org/v2/everything?q={query if query.strip() != "" else 'latest'}&apiKey={NEWS_API_KEY}"
     response = requests.get(url)
     news_data = response.json()
 
@@ -19,5 +19,5 @@ def index():
 
 
 if __name__ == "__main__":
-    app.run(host="0.0.0.0",port=8000)
+    app.run(host="0.0.0.0",port=8000,debug=True)
     #uwaga musi być serve do prawdziwych zastosowań
