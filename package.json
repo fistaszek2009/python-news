@@ -2,12 +2,21 @@
   "name": "flask-03",
   "version": "1.0.0",
   "description": "",
+  "homepage": "https://github.com/fistaszek2009/python-news#readme",
+  "bugs": {
+    "url": "https://github.com/fistaszek2009/python-news/issues"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/fistaszek2009/python-news.git"
+  },
+  "license": "ISC",
+  "author": "",
+  "type": "module",
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
-  "author": "",
-  "license": "ISC",
   "dependencies": {
     "bootstrap": "^5.3.8"
   }
